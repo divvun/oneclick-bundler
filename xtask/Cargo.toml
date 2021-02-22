@@ -1,0 +1,9 @@
+[package]
+name = "xtask"
+version = "0.1.0"
+authors = ["Zoey Riordan <zoey@dos.cafe>"]
+edition = "2018"
+
+[dependencies]
+box-format = { git = "https://github.com/bbqsrc/box", default-features = false, features = ["writer", "zstd"] }
+anyhow = "1.0"

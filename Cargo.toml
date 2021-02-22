@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "installer",
+    "xtask",
+]
+
+[profile.release]
+lto = "fat"
+opt-level = 'z'
+panic = "abort"
