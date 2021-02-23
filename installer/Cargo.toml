@@ -14,3 +14,8 @@ box-format = { git = "https://github.com/bbqsrc/box", default-features = false, 
 
 [build-dependencies]
 embed-resource = "1.1"
+
+[profile.release]
+lto = "fat"
+opt-level = 'z'
+panic = "abort"

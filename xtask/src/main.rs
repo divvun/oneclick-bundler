@@ -20,7 +20,7 @@ fn main() -> Result<()> {
 
 fn build() -> Result<()> {
     Command::new("xargo")
-        .current_dir(project_root())
+        .current_dir(project_root().join("installer"))
         .args(&["build", "--release", "--target=i686-pc-windows-msvc"])
         .status()?;
 
@@ -52,7 +52,7 @@ fn dist() -> Result<()> {
 
     bf.finish()?;
 
-    let dist_file = dist_dir.join("oneclick-installer.exe");
+    let dist_file = dist_dir.join(ONECLICK_INSTALLER);
 
     let mut file = std::fs::OpenOptions::new();
     let file = file.create(true).write(true).open(&dist_file)?;
