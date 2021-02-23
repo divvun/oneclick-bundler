@@ -20,7 +20,7 @@ fn main() -> Result<()> {
 
 fn build() -> Result<()> {
     Command::new("xargo")
-        .current_dir(project_root().join("installer"))
+        .current_dir(project_root().join("bundler"))
         .args(&["build", "--release", "--target=i686-pc-windows-msvc"])
         .status()?;
 
@@ -66,7 +66,7 @@ fn dist() -> Result<()> {
             .join("target")
             .join("i686-pc-windows-msvc")
             .join("release")
-            .join("installer.exe"),
+            .join("bundler.exe"),
     )?;
     let mut extract_reader = BufReader::new(extract_file);
 

@@ -1,5 +1,5 @@
 [package]
-name = "installer"
+name = "bundler"
 version = "0.1.0"
 authors = ["Zoey Riordan <zoey@dos.cafe>"]
 edition = "2018"
