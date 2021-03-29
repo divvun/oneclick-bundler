@@ -13,7 +13,7 @@ const DIVIDER_UUID: u128 = 0xaae8ea9c35484ee4bf28f1a25a6b3c6c;
 const DOTNET_INSTALLER: &str = "dotnet5-webinst.exe";
 const ONECLICK_INSTALLER: &str = "Divvun.Installer.OneClick.exe";
 const KBDI_UTIL: &str = "kbdi.exe";
-
+const KBDI_64_UTIL: &str = "kbdi-x64.exe";
 fn main() -> Result<()> {
     build()?;
     dist()
@@ -41,7 +41,7 @@ fn dist() -> Result<()> {
 
     bf.set_file_attr("created", now.to_vec())?;
 
-    let files = [DOTNET_INSTALLER, ONECLICK_INSTALLER, KBDI_UTIL];
+    let files = [DOTNET_INSTALLER, ONECLICK_INSTALLER, KBDI_UTIL, KBDI_64_UTIL];
 
     for file in &files {
         let box_path = BoxPath::new(file)?;
