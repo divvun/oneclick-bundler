@@ -5,5 +5,5 @@ authors = ["Zoey Riordan <zoey@dos.cafe>"]
 edition = "2018"
 
 [dependencies]
-box-format = { git = "https://github.com/bbqsrc/box", default-features = false, features = ["writer", "zstd"] }
+box-format = { git = "https://github.com/bbqsrc/box", default-features = false, features = ["writer", "zstd"], branch = "main"}
 anyhow = "1.0"

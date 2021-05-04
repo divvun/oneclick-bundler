@@ -10,7 +10,7 @@ edition = "2018"
 memmap = "0.7"
 twoway = "0.2.1"
 tempfile = "3.1.0"
-box-format = { git = "https://github.com/bbqsrc/box", default-features = false, features = ["reader", "zstd"] }
+box-format = { git = "https://github.com/bbqsrc/box", default-features = false, features = ["reader", "zstd"], branch = "main" }
 
 [build-dependencies]
 embed-resource = "1.1"
