@@ -20,7 +20,7 @@ fn main() -> Result<()> {
 }
 
 fn build() -> Result<()> {
-    Command::new("xargo")
+    Command::new("cargo")
         .current_dir(project_root().join("bundler"))
         .args(&["build", "--release", "--target=i686-pc-windows-msvc"])
         .status()?;
