@@ -98,7 +98,7 @@ fn exec(cwd: &std::path::Path) -> i32 {
     let oneclick_path = cwd.join("Divvun.Installer.OneClick.exe");
 
     match Command::new(&dotnet5_path)
-        .args(&["-r", "windowsdesktop", "-v", "5", "-a", "x86"])
+        .args(&["-r", "windowsdesktop", "-v", "8", "-a", "x86"])
         .current_dir(&cwd)
         .stdout(Stdio::null())
         .stderr(Stdio::null())
